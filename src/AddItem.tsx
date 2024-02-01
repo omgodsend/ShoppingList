@@ -11,18 +11,15 @@ type AddItemProps = {
 const AddItem = (props: AddItemProps) => {
     const [open, setOpen] = useState(false);
 
-    const [item, setItem] = useState<Item>({ product: '', amount: '' });
+    const [item, setItem] = useState<Item>({ product: '', amount: 0 });
 
     const addItem = () => {
         props.addItem(item);
-        setItem({ product: '', amount: '' });
+        setItem({ product: '', amount: 0 });
         handleClose();
     };
 
     
-
-
-
 
     const handleOpen = () => {
         setOpen(true);
